@@ -1,0 +1,13 @@
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\bin\Debug\MissionElements.dll
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\bin\Debug\MissionElements.pdb
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\bin\Debug\HSFUniverse.dll
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\bin\Debug\log4net.dll
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\bin\Debug\UserModel.dll
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\bin\Debug\HSFUniverse.pdb
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\bin\Debug\UserModel.pdb
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\bin\Debug\log4net.xml
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.csprojResolveAssemblyReference.cache
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.Properties.Resources.resources
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.csproj.GenerateResource.Cache
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.dll
+C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.pdb

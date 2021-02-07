@@ -1,0 +1,7 @@
+C:\Users\droze\Documents\GitHub\antennachanges\UserModel\bin\Debug\UserModel.dll
+C:\Users\droze\Documents\GitHub\antennachanges\UserModel\bin\Debug\UserModel.pdb
+C:\Users\droze\Documents\GitHub\antennachanges\UserModel\bin\Debug\log4net.dll
+C:\Users\droze\Documents\GitHub\antennachanges\UserModel\bin\Debug\log4net.xml
+C:\Users\droze\Documents\GitHub\antennachanges\UserModel\obj\Debug\UserModel.csprojResolveAssemblyReference.cache
+C:\Users\droze\Documents\GitHub\antennachanges\UserModel\obj\Debug\UserModel.dll
+C:\Users\droze\Documents\GitHub\antennachanges\UserModel\obj\Debug\UserModel.pdb
