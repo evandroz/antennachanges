@@ -17,7 +17,7 @@ numfiles = length(filenames);
 
 [slew_time, slew] = xlsread('asset1_slewangle.csv');
 
-[stress] = xlsread('asset1_antstress.csv');
+[stress] = xlsread('asset1_antstress.csv'); 
 
 %%
 % 
