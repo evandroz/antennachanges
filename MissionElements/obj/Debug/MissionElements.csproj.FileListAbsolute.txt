@@ -11,3 +11,18 @@ C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\obj\Debug\Mission
 C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.csproj.GenerateResource.Cache
 C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.dll
 C:\Users\droze\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\bin\Debug\MissionElements.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\bin\Debug\MissionElements.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\bin\Debug\HSFUniverse.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\bin\Debug\log4net.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\bin\Debug\UserModel.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\bin\Debug\HSFUniverse.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\bin\Debug\UserModel.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\bin\Debug\log4net.xml
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.csprojAssemblyReference.cache
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.Properties.Resources.resources
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.csproj.GenerateResource.cache
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.csproj.CoreCompileInputs.cache
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.csproj.CopyComplete
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\MissionElements\obj\Debug\MissionElements.pdb

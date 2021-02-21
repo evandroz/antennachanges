@@ -33,3 +33,40 @@ C:\Users\droze\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.
 C:\Users\droze\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.csprojResolveAssemblyReference.cache
 C:\Users\droze\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.dll
 C:\Users\droze\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\HSFScheduler.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\HSFScheduler.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\HSFSystem.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\HSFUniverse.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\IronPython.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\IronPython.Modules.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\IronPython.SQLite.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\IronPython.Wpf.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\log4net.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Logging.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Scripting.AspNet.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\MissionElements.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\UserModel.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Utilities.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\HSFSystem.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\HSFUniverse.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Logging.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\MissionElements.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\UserModel.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Utilities.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\IronPython.xml
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\IronPython.Modules.xml
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\IronPython.SQLite.xml
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\IronPython.Wpf.xml
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\log4net.xml
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Scripting.AspNet.xml
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.csprojAssemblyReference.cache
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.csproj.CoreCompileInputs.cache
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.csproj.CopyComplete
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.dll
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.pdb
