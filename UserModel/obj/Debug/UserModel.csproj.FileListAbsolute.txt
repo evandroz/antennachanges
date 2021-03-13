@@ -9,8 +9,6 @@ C:\Users\Evan Desktop\Documents\GitHub\antennachanges\UserModel\bin\Debug\UserMo
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\UserModel\bin\Debug\UserModel.pdb
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\UserModel\bin\Debug\log4net.dll
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\UserModel\bin\Debug\log4net.xml
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\UserModel\obj\Debug\UserModel.csprojAssemblyReference.cache
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\UserModel\obj\Debug\UserModel.csproj.CoreCompileInputs.cache
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\UserModel\obj\Debug\UserModel.csproj.CopyComplete
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\UserModel\obj\Debug\UserModel.dll
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\UserModel\obj\Debug\UserModel.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\UserModel\obj\Debug\UserModel.csprojResolveAssemblyReference.cache

@@ -65,8 +65,6 @@ C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Mic
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Scripting.xml
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Scripting.AspNet.xml
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\bin\Debug\Microsoft.Scripting.Metadata.xml
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.csprojAssemblyReference.cache
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.csproj.CoreCompileInputs.cache
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.csproj.CopyComplete
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.dll
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFScheduler\obj\Debug\HSFScheduler.csprojResolveAssemblyReference.cache

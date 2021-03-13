@@ -33,8 +33,6 @@ C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFUniverse\bin\Debug\Micr
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFUniverse\bin\Debug\IronPython.xml
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFUniverse\bin\Debug\Microsoft.Dynamic.xml
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFUniverse\bin\Debug\Microsoft.Scripting.Metadata.xml
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFUniverse\obj\Debug\HSFUniverse.csprojAssemblyReference.cache
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFUniverse\obj\Debug\HSFUniverse.csproj.CoreCompileInputs.cache
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFUniverse\obj\Debug\HSFUniverse.csproj.CopyComplete
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFUniverse\obj\Debug\HSFUniverse.dll
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFUniverse\obj\Debug\HSFUniverse.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFUniverse\obj\Debug\HSFUniverse.csprojResolveAssemblyReference.cache

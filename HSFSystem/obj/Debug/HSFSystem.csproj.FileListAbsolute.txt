@@ -53,8 +53,6 @@ C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFSystem\bin\Debug\Micros
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFSystem\bin\Debug\Microsoft.Scripting.xml
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFSystem\bin\Debug\Microsoft.Scripting.AspNet.xml
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFSystem\bin\Debug\Microsoft.Scripting.Metadata.xml
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFSystem\obj\Debug\HSFSystem.csprojAssemblyReference.cache
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFSystem\obj\Debug\HSFSystem.csproj.CoreCompileInputs.cache
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFSystem\obj\Debug\HSFSystem.csproj.CopyComplete
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFSystem\obj\Debug\HSFSystem.dll
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFSystem\obj\Debug\HSFSystem.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\HSFSystem\obj\Debug\HSFSystem.csprojResolveAssemblyReference.cache

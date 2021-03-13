@@ -53,8 +53,6 @@ C:\Users\Evan Desktop\Documents\GitHub\antennachanges\Horizon\bin\Debug\Microsof
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\Horizon\bin\Debug\IronPython.xml
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\Horizon\bin\Debug\Microsoft.Dynamic.xml
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\Horizon\bin\Debug\Microsoft.Scripting.Metadata.xml
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\Horizon\obj\Debug\HorizonMain.csprojAssemblyReference.cache
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\Horizon\obj\Debug\HorizonMain.csproj.CoreCompileInputs.cache
-C:\Users\Evan Desktop\Documents\GitHub\antennachanges\Horizon\obj\Debug\HorizonMain.csproj.CopyComplete
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\Horizon\obj\Debug\Horizon.exe
 C:\Users\Evan Desktop\Documents\GitHub\antennachanges\Horizon\obj\Debug\Horizon.pdb
+C:\Users\Evan Desktop\Documents\GitHub\antennachanges\Horizon\obj\Debug\HorizonMain.csprojResolveAssemblyReference.cache
