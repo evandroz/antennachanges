@@ -57,7 +57,7 @@ class ssdr(HSFSubsystem.SSDR):
                 return True
           #  Logger.Report("SSDR")
             return False
-        if(self/_task.Type == TaskType.COMM):
+        if(self._task.Type == TaskType.COMM):
              ts = event.GetTaskStart(self.Asset)
              event.SetTaskEnd(self.Asset, ts + 60.0)
              te = event.GetTaskEnd(self.Asset)
