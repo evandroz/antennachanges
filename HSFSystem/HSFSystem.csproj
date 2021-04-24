@@ -86,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessSub.cs" />
-    <Compile Include="ADCS.cs" />
+    <Compile Include="Antenna.cs" />
     <Compile Include="Comm.cs" />
     <Compile Include="Constraint.cs" />
     <Compile Include="ConstraintFactory.cs" />

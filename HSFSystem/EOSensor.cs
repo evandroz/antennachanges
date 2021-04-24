@@ -25,7 +25,7 @@ namespace HSFSubsystem
         protected double _midQualityTime = 5;
         protected double _highQualityPixels = 15000;
         protected double _highQualityTime = 7;
-        #endregion
+        #endregion Attributes
 
         #region Constructors
         /// <summary>
