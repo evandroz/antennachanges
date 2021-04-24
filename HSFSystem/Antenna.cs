@@ -64,7 +64,7 @@ namespace HSFSubsystem
         /// <summary>
         /// Constructor for scripted subsystem
         /// </summary>
-        /// <param name="EOSensorXmlNode"></param>
+        /// <param name="AntennaXmlNode"></param>
         /// <param name="asset"></param>
         public Antenna(XmlNode AntennaNode, Asset asset)
         {
@@ -98,55 +98,58 @@ namespace HSFSubsystem
         {
             if (base.CanPerform( proposedEvent, environment) == false)
                 return false;
-            //double timetoslew = (rand()%5)+8;
-            double timetoslew = _timetoslew;
-
-            double es = proposedEvent.GetEventStart(Asset);
-            double ts = proposedEvent.GetTaskStart(Asset);
-            double te = proposedEvent.GetTaskEnd(Asset);
-
-            if (es + timetoslew > ts)
+            if (_task.Type == TaskType.IMAGING)
             {
-                if (es + timetoslew > te)
+
+                //double timetoslew = (rand()%5)+8;
+                double timetoslew = _timetoslew;
+
+                double es = proposedEvent.GetEventStart(Asset);
+                double ts = proposedEvent.GetTaskStart(Asset);
+                double te = proposedEvent.GetTaskEnd(Asset);
+
+                if (es + timetoslew > ts)
                 {
-                    // TODO: Change this to Logger
-                    //Console.WriteLine("Antenna: Not enough time to slew event start: "+ es + "task end" + te);
-                    return false;
+                    if (es + timetoslew > te)
+                    {
+                        // TODO: Change this to Logger
+                        //Console.WriteLine("Antenna: Not enough time to slew event start: "+ es + "task end" + te);
+                        return false;
+                    }
+                    else
+                        ts = es + timetoslew;
                 }
-                else
-                    ts = es + timetoslew;
+
+                // set task end based upon time to capture
+                te = ts + timetocapture;
+                proposedEvent.SetTaskEnd(Asset, te);
+                // from Brown, Pp. 99
+                DynamicState position = Asset.AssetDynamicState;
+                double timage = ts + timetocapture / 2;
+                Matrix<double> m_SC_pos_at_ts_ECI = position.PositionECI(ts);
+                Matrix<double> m_target_pos_at_ts_ECI = _task.Target.DynamicState.PositionECI(ts);
+                Matrix<double> m_pv = m_target_pos_at_ts_ECI - m_SC_pos_at_ts_ECI;
+                Matrix<double> pos_norm = -m_SC_pos_at_ts_ECI / Matrix<double>.Norm(-m_SC_pos_at_ts_ECI);
+                Matrix<double> pv_norm = m_pv / Matrix<double>.Norm(m_pv);
+
+
+                double I = (arc - Math.Sin(arc)) * (Math.Pow(r2, 4) - Math.Pow(r1, 4)) / 8;
+                double area = (Math.Pow(r2, 2) - Math.Pow(r1, 2)) * (Math.PI);
+                double volume = area * L;
+                double deltaangle = Math.Acos(Matrix<double>.Dot(position.PositionECI(te), position.PositionECI(ts))) / (Matrix<double>.Norm(position.PositionECI(te)) * Matrix<double>.Norm(position.PositionECI(ts)));
+                double a = deltaangle / (Math.Pow(te - ts, 2));
+                double M = density * volume;
+                double force = a * M;
+                double finaldeflection = force * Math.Pow(L / 2, 2) * ((5 * (L / 2)) / (6 * E * I));
+                double antstress = (M * L / 2) / I;
+                double incidenceang = 90 - 180 / Math.PI * Math.Acos(Matrix<double>.Dot(pos_norm, pv_norm));
+
+                // set state data
+                _newState.AddValue(ANTDATA_KEY, new KeyValuePair<double, double>(timage, incidenceang));
+                _newState.AddValue(ANTINCIDENCE_KEY, new KeyValuePair<double, double>(timage, incidenceang));
+                _newState.AddValue(ANTSTRESS_KEY, new KeyValuePair<double, double>(timage, incidenceang));
             }
-
-            // set task end based upon time to capture
-            te = ts + timetocapture;
-            proposedEvent.SetTaskEnd(Asset, te);
-            // from Brown, Pp. 99
-            DynamicState position = Asset.AssetDynamicState;
-            double timage = ts + timetocapture / 2;
-            Matrix<double> m_SC_pos_at_ts_ECI = position.PositionECI(ts);
-            Matrix<double> m_target_pos_at_ts_ECI = _task.Target.DynamicState.PositionECI(ts);
-            Matrix<double> m_pv = m_target_pos_at_ts_ECI - m_SC_pos_at_ts_ECI;
-            Matrix<double> pos_norm = -m_SC_pos_at_ts_ECI / Matrix<double>.Norm(-m_SC_pos_at_ts_ECI);
-            Matrix<double> pv_norm = m_pv / Matrix<double>.Norm(m_pv);
-
-
-            double I = (arc - Math.Sin(arc)) * (Math.Pow(r2, 4) - Math.Pow(r1, 4)) / 8;
-            double area = (Math.Pow(r2, 2) - Math.Pow(r1, 2)) * (Math.PI);
-            double volume = area * L;
-            double deltaangle = Math.Acos(Matrix<double>.Dot(position.PositionECI(te), position.PositionECI(ts))) / (Matrix[System.Double].Norm(position.PositionECI(te)) * Matrix[System.Double].Norm(position.PositionECI(ts)));
-            double a = deltaangle / (Math.Pow(te - ts, 2));
-            double M = density * volume;
-            double force = a * M;
-            double finaldeflection = force * Math.Pow(L / 2, 2) * ((5 * (L / 2)) / (6 * E * I));
-            double antstress = (M * L / 2) / I;
-            double incidenceang = 90 - 180 / Math.PI * Math.Acos(Matrix<double>.Dot(pos_norm, pv_norm));
-
-            // set state data
-            _newState.AddValue(ANTDATA_KEY, new KeyValuePair<double, double>(timage, incidenceang));
-            _newState.AddValue(ANTINCIDENCE_KEY, new KeyValuePair<double, double>(timage, incidenceang));
-            _newState.AddValue(ANTSTRESS_KEY, new KeyValuePair<double, double>(timage, incidenceang));
-            
-            return true;
+			    return true;
         }
 
         /// <summary>

@@ -3,18 +3,18 @@
 
 using System;
 using System.Collections.Generic;
-using Utilities;
-using System.Xml;
-using MissionElements;
 using HSFUniverse;
+using MissionElements;
+using System.Xml;
 using HSFSystem;
-//using Logging;
+using Utilities;
 
 namespace HSFSubsystem
 {
     public class ADCS : Subsystem
     {
         #region Attributes
+        public static string SUBNAME_ADCS = "ADCS";
         protected StateVarKey<Matrix<double>> POINTVEC_KEY;
         protected double _timetoslew = 10;
         #endregion Attributes
@@ -27,9 +27,9 @@ namespace HSFSubsystem
         /// <param name="ADCSNode"></param>
         /// <param name="dependencies"></param>
         /// <param name="asset"></param>
-        public ADCS(XmlNode ADCSNode, Dependency dependencies, Asset asset) 
+        public ADCS(XmlNode ADCSNode, Dependency dependencies, Asset asset)
         {
-            DefaultSubName = "Adcs";
+            DefaultSubName = "ADCS";
             Asset = asset;
             GetSubNameFromXmlNode(ADCSNode);
             /*double slewTime;
@@ -42,7 +42,7 @@ namespace HSFSubsystem
             addKey(POINTVEC_KEY);
             DependentSubsystems = new List<Subsystem>();
             SubsystemDependencyFunctions = new Dictionary<string, Delegate>();
-            dependencies.Add("PowerfromADCS"+"."+Asset.Name, new Func<Event, HSFProfile<double>>(POWERSUB_PowerProfile_ADCSSUB));
+            dependencies.Add("PowerfromADCS" + "." + Asset.Name, new Func<Event, HSFProfile<double>>(POWERSUB_PowerProfile_ADCSSUB));
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace HSFSubsystem
         /// <returns></returns>
         public override bool CanPerform(Event proposedEvent, Universe environment)
         {
-            if (base.CanPerform( proposedEvent, environment) == false)
+            if (base.CanPerform(proposedEvent, environment) == false)
                 return false;
             //double timetoslew = (rand()%5)+8;
             double timetoslew = _timetoslew;
