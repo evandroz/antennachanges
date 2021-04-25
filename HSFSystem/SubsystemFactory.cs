@@ -40,6 +40,10 @@ namespace HSFSubsystem
                 {
                    subDic.Add(name, new ADCS(SubsystemXmlNode, dependencies, asset));
                 }
+                else if (type.Equals("antenna"))
+                {
+                    subDic.Add(name, new Antenna(SubsystemXmlNode, dependencies, asset));
+                }
                 else if (type.Equals("power"))
                 {
                     subDic.Add(name, new Power(SubsystemXmlNode, dependencies, asset));

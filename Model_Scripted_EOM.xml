@@ -20,6 +20,14 @@
 			<DEPENDENCY subsystemName="Access"></DEPENDENCY>
 		</SUBSYSTEM>
 		<SUBSYSTEM
+			Type="Antenna"
+			subsystemName = "Antenna">
+			<IC type="Double" key="antenna_data" value="0.0"></IC>
+			<IC type="Double" key="antenna_incidence" value="0.0"></IC>
+			<IC type="Double" key="antenna_stress" value="0.0"></IC>
+			<DEPENDENCY subsystemName="Adcs"></DEPENDENCY>
+		</SUBSYSTEM>
+		<SUBSYSTEM
 			Type="EOSensor"
 			subsystemName = "EOSensor"
 			lowQualityNumPixels="5000"
