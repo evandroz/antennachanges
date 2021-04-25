@@ -133,7 +133,7 @@ namespace HSFSubsystem
             double I = (arc - Math.Sin(arc)) * (Math.Pow(r2, 4) - Math.Pow(r1, 4)) / 8;
             double area = (Math.Pow(r2, 2) - Math.Pow(r1, 2)) * (Math.PI);
             double volume = area * L;
-            double deltaangle = Math.Acos(Matrix<double>.Dot(position.PositionECI(te), position.PositionECI(ts))) / (Matrix[System.Double].Norm(position.PositionECI(te)) * Matrix[System.Double].Norm(position.PositionECI(ts)));
+            double deltaangle = Math.Acos(Matrix<double>.Dot(position.PositionECI(te), position.PositionECI(ts))) / (Matrix<double>.Norm(position.PositionECI(te)) * Matrix<double>.Norm(position.PositionECI(ts)));
             double a = deltaangle / (Math.Pow(te - ts, 2));
             double M = density * volume;
             double force = a * M;
