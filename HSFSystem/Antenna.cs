@@ -125,26 +125,31 @@ namespace HSFSubsystem
             double timage = ts + timetocapture / 2;
             Matrix<double> m_SC_pos_at_ts_ECI = position.PositionECI(ts);
             Matrix<double> m_target_pos_at_ts_ECI = _task.Target.DynamicState.PositionECI(ts);
-            Matrix<double> m_pv = m_target_pos_at_ts_ECI - m_SC_pos_at_ts_ECI;
-            Matrix<double> pos_norm = -m_SC_pos_at_ts_ECI / Matrix<double>.Norm(-m_SC_pos_at_ts_ECI);
-            Matrix<double> pv_norm = m_pv / Matrix<double>.Norm(m_pv);
+            Matrix<double> m_pv_ts = m_target_pos_at_ts_ECI - m_SC_pos_at_ts_ECI;
+            Matrix<double> pos_norm_ts = -m_SC_pos_at_ts_ECI / Matrix<double>.Norm(-m_SC_pos_at_ts_ECI);
+            Matrix<double> pv_norm_ts = m_pv_ts / Matrix<double>.Norm(m_pv_ts);
+            Matrix<double> m_SC_pos_at_te_ECI = position.PositionECI(ts);
+            Matrix<double> m_target_pos_at_te_ECI = _task.Target.DynamicState.PositionECI(ts);
+            Matrix<double> m_pv_te = m_target_pos_at_te_ECI - m_SC_pos_at_te_ECI;
+            Matrix<double> pos_norm_te = -m_SC_pos_at_ts_ECI / Matrix<double>.Norm(-m_SC_pos_at_te_ECI);
+            Matrix<double> pv_norm_te = m_pv_ts / Matrix<double>.Norm(m_pv_te);
 
 
             double I = (arc - Math.Sin(arc)) * (Math.Pow(r2, 4) - Math.Pow(r1, 4)) / 8;
             double area = (Math.Pow(r2, 2) - Math.Pow(r1, 2)) * (Math.PI);
             double volume = area * L;
-            double deltaangle = Math.Acos(Matrix<double>.Dot(position.PositionECI(te), position.PositionECI(ts))) / (Matrix<double>.Norm(position.PositionECI(te)) * Matrix<double>.Norm(position.PositionECI(ts)));
+            double deltaangle = Math.Acos(Matrix<double>.Dot(m_pv_te, m_pv_ts)) / (Matrix<double>.Norm(m_pv_te) * Matrix<double>.Norm(m_pv_ts));
             double a = deltaangle / (Math.Pow(te - ts, 2));
             double M = density * volume;
             double force = a * M;
             double finaldeflection = force * Math.Pow(L / 2, 2) * ((5 * (L / 2)) / (6 * E * I));
-            double antstress = (M * L / 2) / I;
-            double incidenceang = 90 - 180 / Math.PI * Math.Acos(Matrix<double>.Dot(pos_norm, pv_norm));
+            double antstress = (force * L / 2) / I;
+            double incidenceang = 90 - 180 / Math.PI * Math.Acos(Matrix<double>.Dot(pos_norm_ts, pv_norm_ts));
 
             // set state data
-            _newState.AddValue(ANTDATA_KEY, new KeyValuePair<double, double>(timage, incidenceang));
+            _newState.AddValue(ANTDATA_KEY, new KeyValuePair<double, double>(timage, antdatarate));
             _newState.AddValue(ANTINCIDENCE_KEY, new KeyValuePair<double, double>(timage, incidenceang));
-            _newState.AddValue(ANTSTRESS_KEY, new KeyValuePair<double, double>(timage, incidenceang));
+            _newState.AddValue(ANTSTRESS_KEY, new KeyValuePair<double, double>(timage, antstress));
             
             return true;
         }
