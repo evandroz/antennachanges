@@ -79,6 +79,15 @@ class eosensor(HSFSubsystem.EOSensor):
 
              self._newState.AddValue(self.EOON_KEY, KeyValuePair[System.Double, System.Boolean](ts, True))
              self._newState.AddValue(self.EOON_KEY, KeyValuePair[System.Double, System.Boolean](te, False))
+)
+			 # angle = self._angle
+			 # obj_dist = math.dist(m_SC_pos_at_tf_ECI,m_target_pos_at_tf_ECI)
+			 # pixel_dens = self._pdensity
+			
+			 # resolution = pixels and distance and camera equation   (obj_dist)*(angle)/(pixel_dens)
+			 
+			 # self._newState.AddValue(self.RESOLUTION_KEY, KeyValuePair[System.Double, Matrix[System.Double]](timage, resolution))
+
              return True     
     def CanExtend(self, event, universe, extendTo):
         print "entered"

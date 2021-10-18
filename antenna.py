@@ -93,6 +93,12 @@ class antenna(Subsystem):
             finaldeflection = force*Math.Pow(L/2,2)*((5*(L/2))/(6*E*I))
             antstress = (M*L/2)/I
 
+			# beam vibration calcs
+			# vibration modes:  k1 = 3.52
+			# k2 = 22.0
+			# k3 = 61.7
+			# frequency = Kn * math.sqrt(E*I*a) / (2*Math.PI *  math.sqrt(force*Math.Pow(L,3))  (should be unit load per length, but force/length is the same thing and the denominator should be ul/l * length^4)
+
             #yield stress check for antstress 
 
             self._newState.AddValue(self.Antenna_Incidence, KeyValuePair[System.Double, Matrix[System.Double]](timage, antincidenceang))

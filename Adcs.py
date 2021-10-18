@@ -84,7 +84,7 @@ class adcs(HSFSubsystem.ADCS):
 
         event.State.SetProfile(self.POINTVEC_KEY, HSFProfile[Matrix[System.Double]](ts, m_pv_start))
         event.SetTaskStart(self.Asset, ts)
-        self._newState.AddValue(self.ADCS_Slew, KeyValuePair[System.Double, Matrix[System.Double]](timage, slewangle))
+        self._newState.AddValue(self.SLEW_KEY, KeyValuePair[System.Double, Matrix[System.Double]](timage, slewangle))
 
         return True
        # return super(adcs, self).canPerform(event, universe)
