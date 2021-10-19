@@ -98,7 +98,7 @@ class antenna(Subsystem):
 			# k2 = 22.0
 			# k3 = 61.7
 			# frequency = Kn * math.sqrt(E*I*a) / (2*Math.PI *  math.sqrt(force*Math.Pow(L,3))  (should be unit load per length, but force/length is the same thing and the denominator should be ul/l * length^4)
-
+			# vibrationangle/sec = ((finaldeflection / length ) * frequency)
             #yield stress check for antstress 
 
             self._newState.AddValue(self.Antenna_Incidence, KeyValuePair[System.Double, Matrix[System.Double]](timage, antincidenceang))
