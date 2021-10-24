@@ -80,16 +80,25 @@ class eosensor(HSFSubsystem.EOSensor):
              self._newState.AddValue(self.EOON_KEY, KeyValuePair[System.Double, System.Boolean](ts, True))
              self._newState.AddValue(self.EOON_KEY, KeyValuePair[System.Double, System.Boolean](te, False))
 
-			 # angle = self._angle
+			 # angle = self._angle  #viewing angle of camera 
 			 # obj_dist = math.dist(m_SC_pos_at_tf_ECI,m_target_pos_at_tf_ECI)
 			 # pixel_dens = self._pdensity
 			
 			 # resolution = pixels and distance and camera equation   (obj_dist)*(angle)/(pixel_dens)
-			 # NIIRS calculation  NIIRS = Asys – aLog10 GSDGM + bLog10 RERGM – 0.656HGM – 0.344 (G / SNR) eq. (1)
+             # Asys = 10.251 #value for visible spectrum
+             # GSDGM = 15 # meters (distance on ground between pixel centers)
+             # RERGM = .25 # estimate from file:///C:/Users/droze/Downloads/Estimation_of_the_Image_Interpretability_of_ZY-3_S.pdf
+             # a = 3.16 
+             # b = 2.817  # since RER  < .9
+             # HGM = 1.4 # value between 1 and 3, assumed 1.4 from text 
+             # G = 0 #no image enhancement so Noise gain due to image enhancement is zero therefore SNR doesn't matter
+			 # NIIRS = Asys – a*Log10(GSDGM) + b*Log10(RERGM) – 0.656*HGM – 0.344 * (G / SNR) # NIIRS calculation eq. (1)  SNR is almost negligible effect on NIIRS - assume SNR of >5 gives reasonable NIIRS within 5% value
+             # 
+
 
              #rgb imager xscape50 30m_GSD   |  120KM SWATH  |    500KM orbit height 
 			 # self._newState.AddValue(self.RESOLUTION_KEY, KeyValuePair[System.Double, Matrix[System.Double]](timage, resolution))
-
+             # self._newState.AddValue(selv.NIIRS_KEY, KeyValuePair[System.Double, Matrix[System.Double]](timage, NIIRS))
              return True    
     def CanExtend(self, event, universe, extendTo):
         print "entered"
