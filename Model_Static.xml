@@ -24,9 +24,12 @@
 			lowQualityNumPixels="5000"
 			midQualityNumPixels="10000"
 			highQualityNumPixels="15000"
-			lowQualityCaptureTime="3"
-			midQualityCaptureTime="5"
-			highQualityCaptureTime="7">
+			lowQualityTime="3"
+			midQualityTime="5"
+			highQualityTime="7"
+			sensorwidth="13.3"
+			focallength="8.8"
+			ypixels="1920">
 			<IC type="Double" key="numPixels" value="0.0"></IC>
 			<IC type="Double" key="IncidenceAngle" value="0.0"></IC>
 			<IC type="Bool" key="EOSensorOn" value="0.0"></IC>

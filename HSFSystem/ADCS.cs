@@ -16,6 +16,7 @@ namespace HSFSubsystem
         #region Attributes
         public static string SUBNAME_ADCS = "ADCS";
         protected StateVarKey<Matrix<double>> POINTVEC_KEY;
+        protected StateVarKey<Matrix<double>> SLEWANGLE_KEY; 
         protected double _timetoslew = 10;
         #endregion Attributes
 
@@ -38,6 +39,8 @@ namespace HSFSubsystem
                 Double.TryParse(ADCSNode.Attributes["slewTime"].Value, out slewTime);
                 _timetoslew = slewTime;
             }*/
+            SLEWANGLE_KEY = new StateVarKey<Matrix<double>>(Asset.Name + "." + "slew_angle");
+            addKey(SLEWANGLE_KEY);
             POINTVEC_KEY = new StateVarKey<Matrix<double>>(Asset.Name + "." + "eci_pointing_vector(xyz)");
             addKey(POINTVEC_KEY);
             DependentSubsystems = new List<Subsystem>();
@@ -54,6 +57,8 @@ namespace HSFSubsystem
         {
             Asset = asset;
             GetSubNameFromXmlNode(ADCSNode);
+            SLEWANGLE_KEY = new StateVarKey<Matrix<double>>(Asset.Name + "." + "slew_angle");
+            addKey(SLEWANGLE_KEY);
             POINTVEC_KEY = new StateVarKey<Matrix<double>>(Asset.Name + "." + "eci_pointing_vector(xyz)");
             addKey(POINTVEC_KEY);
         }
@@ -89,16 +94,25 @@ namespace HSFSubsystem
                     ts = es + timetoslew;
             }
 
-
             // from Brown, Pp. 99
             DynamicState position = Asset.AssetDynamicState;
             Matrix<double> m_SC_pos_at_ts_ECI = position.PositionECI(ts);
             Matrix<double> m_target_pos_at_ts_ECI = _task.Target.DynamicState.PositionECI(ts);
             Matrix<double> m_pv = m_target_pos_at_ts_ECI - m_SC_pos_at_ts_ECI;
 
+            Matrix<double> m_SC_pos_at_te_ECI = position.PositionECI(te);
+            Matrix<double> m_target_pos_at_te_ECI = _task.Target.DynamicState.PositionECI(te);
+            Matrix<double> m_pv_e = m_target_pos_at_te_ECI - m_SC_pos_at_te_ECI;
+
+
+            double dp = Matrix<double>.Dot(m_pv, m_pv_e);
+            double slewangle = Math.Acos(Matrix<double>.Dot(m_pv, m_pv_e) / (Math.Sqrt(Matrix<double>.Dot(m_pv, m_pv)) * Math.Sqrt(Matrix<double>.Dot(m_pv_e, m_pv_e))));
+
             // set state data
+
             _newState.SetProfile(POINTVEC_KEY, new HSFProfile<Matrix<double>>(ts, m_pv));
             proposedEvent.SetTaskStart(Asset, ts);
+            _newState.SetProfile(SLEWANGLE_KEY, new HSFProfile<Matrix<double>>(te, slewangle);
             return true;
         }
 
